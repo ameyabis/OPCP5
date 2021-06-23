@@ -1,0 +1,93 @@
+body {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #F3EAF1;
+}
+header nav {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 50px 0px 50px;
+}
+header nav a {
+  text-decoration: none;
+  color: #000;
+}
+header nav a img {
+  width: 100px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+header nav ul li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+header h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .nounours {
+  width: 25%;
+  margin: 10px;
+}
+main .nounours_pdt {
+  text-decoration: none;
+  color: #000;
+}
+main .nounours_pdt figure {
+  position: relative;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px #989898;
+}
+main .nounours_pdt figure .nounours_pdt_image {
+  object-fit: cover;
+  width: 100%;
+  height: 130px;
+  border-radius: 10px 10px 0 0;
+}
+main .nounours_pdt figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .nounours_pdt figure figcaption .nounours_pdt_titre {
+  text-align: center;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+main .nounours_pdt figure figcaption .nounours_pdt_prix {
+  text-align: center;
+  width: 50%;
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+footer {
+  padding: 20px;
+  background-color: #F3EAF1;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

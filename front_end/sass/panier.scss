@@ -1,0 +1,171 @@
+body{
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #F3EAF1;
+    nav{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        padding: 50px 50px 0px 50px;
+        a{
+            text-decoration: none;
+            color: #000;
+            img{
+                width: 100px;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            li{
+                list-style-type: none;
+                margin-right: 20px;
+            }
+        }
+    }
+    h1{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    #list_produit{
+        width: 75%;
+        table{
+            width: 100%;
+            thead{
+                .titre{
+                    text-align: center;
+                    .td-titre{
+                        width: 100%;
+                        border: #000 2px solid;
+                        h2{
+                            text-align: center;
+                        }
+                    }
+                }
+                .categorie{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -4px;
+                    .td-produit{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 55%;
+                        border: #000 2px solid;
+                    }
+                    .td-option{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 15%;
+                        border: #000 2px solid;
+                    }
+                    .td-prix{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 15%;
+                        border: #000 2px solid;
+                    }
+                    .td-supprimer{
+                        width: 15%;
+                        border: #000 2px solid;
+                        h3{
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            #show_panier{
+                width: auto;
+                .panier{
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+                    margin: -4px 0 -2px 0;
+                    &_produit{
+                        width: 39%;
+                        border: #000 2px solid;
+                        padding : 7px 0 7px 0;
+                    }
+                    &_image{
+                        width: 15%;
+                        border: #000 2px solid;
+                        padding : 7px 0 7px 0;
+                        img{
+                            width: 100px;
+                        }
+                    }
+                    &_option{
+                        width: 15%;
+                        border: #000 2px solid;
+                        padding : 7px 0 7px 0;
+                    }
+                    &_prix{
+                        width: 15%;
+                        border: #000 2px solid;
+                        padding : 7px 0 7px 0;
+                    }
+                    &_supprimer{
+                        width: 15%;
+                        border: #000 2px solid;
+                        padding : 7px 0 7px 0;
+                    }
+                }
+            }
+            .supprimer{
+                text-align: center;
+            }
+            .prix_total{
+                text-align: center;
+            }
+        }
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .last_name_label{
+            margin: 10px 0 0 0;
+        }
+        .first_name_label{
+            margin: 10px 0 0 0;
+        }
+        .address_label{
+            margin: 10px 0 0 0;
+        }
+        .city_label{
+            margin: 10px 0 0 0;
+        }
+        .email_label{
+            margin: 10px 0 0 0;
+        }
+        #btn_valider{
+            margin: 10px 0 10px 0;
+        }
+    }
+}
+
+
+footer{
+    padding: 20px;
+    background-color: #F3EAF1;
+    text-align: center;
+}

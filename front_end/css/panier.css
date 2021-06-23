@@ -1,0 +1,170 @@
+body {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #F3EAF1;
+}
+header nav {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 50px 0px 50px;
+}
+header nav a {
+  text-decoration: none;
+  color: #000;
+}
+header nav a img {
+  width: 100px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+header nav ul li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+header h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main #list_produit {
+  width: 75%;
+}
+main #list_produit table {
+  width: 100%;
+}
+main #list_produit table thead .titre {
+  text-align: center;
+}
+main #list_produit table thead .titre .td-titre {
+  width: 100%;
+  border: #000 2px solid;
+}
+main #list_produit table thead .titre .td-titre h2 {
+  text-align: center;
+}
+main #list_produit table thead .categorie {
+  display: flex;
+  justify-content: center;
+  margin-top: -4px;
+}
+main #list_produit table thead .categorie .td-produit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55%;
+  border: #000 2px solid;
+}
+main #list_produit table thead .categorie .td-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  border: #000 2px solid;
+}
+main #list_produit table thead .categorie .td-prix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  border: #000 2px solid;
+}
+main #list_produit table thead .categorie .td-supprimer {
+  width: 15%;
+  border: #000 2px solid;
+}
+main #list_produit table thead .categorie .td-supprimer h3 {
+  text-align: center;
+}
+main #list_produit table #show_panier {
+  width: auto;
+}
+main #list_produit table #show_panier .panier {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin: -4px 0 -2px 0;
+}
+main #list_produit table #show_panier .panier_produit {
+  width: 39%;
+  border: #000 2px solid;
+  padding: 7px 0 7px 0;
+}
+main #list_produit table #show_panier .panier_image {
+  width: 15%;
+  border: #000 2px solid;
+  padding: 7px 0 7px 0;
+}
+main #list_produit table #show_panier .panier_image img {
+  width: 100px;
+}
+main #list_produit table #show_panier .panier_option {
+  width: 15%;
+  border: #000 2px solid;
+  padding: 7px 0 7px 0;
+}
+main #list_produit table #show_panier .panier_prix {
+  width: 15%;
+  border: #000 2px solid;
+  padding: 7px 0 7px 0;
+}
+main #list_produit table #show_panier .panier_supprimer {
+  width: 15%;
+  border: #000 2px solid;
+  padding: 7px 0 7px 0;
+}
+main #list_produit table .supprimer {
+  text-align: center;
+}
+main #list_produit table .prix_total {
+  text-align: center;
+}
+main .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .form .last_name_label {
+  margin: 10px 0 0 0;
+}
+main .form .first_name_label {
+  margin: 10px 0 0 0;
+}
+main .form .address_label {
+  margin: 10px 0 0 0;
+}
+main .form .city_label {
+  margin: 10px 0 0 0;
+}
+main .form .email_label {
+  margin: 10px 0 0 0;
+}
+main .form #btn_valider {
+  margin: 10px 0 10px 0;
+}
+
+footer {
+  padding: 20px;
+  background-color: #F3EAF1;
+  text-align: center;
+}
+
+/*# sourceMappingURL=panier.css.map */

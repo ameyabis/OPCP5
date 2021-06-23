@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/panier.css" />
+    <script src="./js/panier.js" defer></script>
+    <title>Orinoco - Panier</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="../front_end/logo/logo.png" alt="Logo Orinoco">
+            </a>
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="#">Panier</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Ours en peluche faits à la main</h1>
+    </header>
+
+    <main id="main">
+        <div id="list_produit">
+            <table>
+                <thead>
+                    <tr class="titre">
+                        <td class="td-titre">
+                            <h2>Informations de la commande</h2>
+                        </td>
+                    </tr>
+                    <tr class="categorie">
+                        <td class="td-produit"><h3>Produit</h3></td>
+                        <td class="td-option"><h3>Option</h3></td>
+                        <td class="td-prix"><h3>Prix</h3></td>
+                        <td class="td-supprimer"><h3>Supprimer article</h3></td>
+                    </tr>
+                </thead>
+                <tbody id="show_panier"></tbody>
+              </table>
+        </div>
+
+        <form id="form" class="form">
+            <label class="last_name_label" for="last_name"> Nom : </label>
+            <input type="text" name="last_name" id="last_name" placeholder="Banner" required/>
+            
+            <label class="first_name_label" for="first_name"> Prénom : </label>
+            <input type="text" name="first_name" id="first_name" placeholder="Bruce" required/>
+            
+            <label class="address_label" for="address"> Adresse : </label>
+            <input type="text" name="address" id="address" placeholder="39 rue Duvert" required/>
+            
+            <label class="city_label" for="city"> Ville : </label>
+            <input type="text" name="city" id="city" placeholder="Greenville" required/>
+            
+            <label class="email_label" for="email"> Email : </label>
+            <input type="text" name="email" id="email" placeholder="brucebanner@greenville.com" required/>
+
+            <input id="btn_valider" type="submit" value="Confirmer le panier">
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2021 Orinoco</p>
+    </footer>
+</body>
+</html>

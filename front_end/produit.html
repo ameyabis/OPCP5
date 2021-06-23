@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/produit.css" />
+    <script src="./js/produit.js" defer></script>
+    <title>Orinoco - Produit</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="../front_end/logo/logo.png" alt="Logo Orinoco">
+            </a>
+            <ul>
+                <li>
+                    <a href="#">Accueil</a>
+                </li>
+                <li>
+                    <a href="panier.html">Panier</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Ours en peluche faits à la main</h1>
+    </header>
+
+    <main id="main">
+        <!--Création d'une template pour pouvoir afficher le produit selectionné-->
+        <template id="templateNounours">
+            <article id="nounours" class="nounours">
+                <figure>
+                    <img id="nounours_image" class="nounours_pdt_image" src="" alt="">
+                    <figcaption>
+                        <h2 id="nounours_titre" class="nounours_pdt_titre">NON DE L'ARTICLE</h2>
+                        <p id="nounours_prix" class="nounours_pdt_prix">PRIX NOUNOURS</p>
+                        <p id="nounours_desc" class="nounours_pdt_desc">DESCRIPTION DU NOUNOURS</p>
+                        
+                        <label class="select_color_label" for="select_color">Choisissez votre couleur</label>
+                        <select name="color" id="select_colors"></select>
+                        
+                        <input id="ajout_panier" type="button" value="Ajouter au panier">
+                    </figcaption>
+                </figure>
+            </article>
+        </template>
+    </main>
+
+    <footer>
+        <p>© 2021 Orinoco</p>
+    </footer>
+</body>
+</html>

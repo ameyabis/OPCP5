@@ -1,0 +1,98 @@
+body {
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #F3EAF1;
+}
+header nav {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 50px 0px 50px;
+}
+header nav a {
+  text-decoration: none;
+  color: #000;
+}
+header nav a img {
+  width: 100px;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+header nav ul li {
+  list-style-type: none;
+  margin-right: 20px;
+}
+header h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .nounours {
+  width: 30%;
+  margin: 10px;
+}
+main .nounours figure {
+  position: relative;
+  margin: 10px 0 10px 0;
+  width: 100%;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px #989898;
+}
+main .nounours figure .nounours_pdt_image {
+  object-fit: cover;
+  width: 100%;
+  height: 275px;
+  border-radius: 10px 10px 0 0;
+}
+main .nounours figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .nounours figure figcaption .nounours_pdt_titre {
+  text-align: center;
+  margin: 10px 0 0 0;
+  padding: 0;
+  width: 50%;
+}
+main .nounours figure figcaption p {
+  text-align: justify;
+  margin: 10px 0 0 0;
+  padding: 0 10px 0 10px;
+}
+main .nounours figure figcaption .select_color_label {
+  margin: 10px 0 0 0;
+}
+main .nounours figure figcaption #select_colors {
+  margin: 10px 0 0 0;
+}
+main .nounours figure figcaption #ajout_panier {
+  margin: 10px 0 0 0;
+}
+
+footer {
+  padding: 20px;
+  background-color: #F3EAF1;
+  text-align: center;
+}
+
+/*# sourceMappingURL=produit.css.map */

@@ -1,0 +1,14 @@
+{
+  "name": "front_end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "index": "sass --watch ./sass/index.scss:css/index.css",
+    "produit": "sass --watch ./sass/produit.scss:css/produit.css",
+    "panier": "sass --watch ./sass/panier.scss:css/panier.css",
+    "confirmation": "sass --watch ./sass/confirmation.scss:css/confirmation.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
