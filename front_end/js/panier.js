@@ -6,8 +6,8 @@ const displayPanier = document.getElementById("show_panier");
 
 //Afficher le PANIER
 function showCommand() {
-    //Si panier vide alors afficher PANIER VIDE
-    if (saveProductLocalStorage === null) {
+    //Si panier est vide alors afficher PANIER VIDE
+    if (saveProductLocalStorage === null || saveProductLocalStorage == 0) {
         let panierVide = `
             <table id="panier_vide">
                 <thead>
@@ -18,44 +18,70 @@ function showCommand() {
             </table>
         `;
         displayPanierVide.innerHTML = panierVide;
-    } else { // Sinon afficher les produit present dans le LOCAL STORAGE
+    } else { // Sinon afficher les produits present dans le LOCAL STORAGE
         let panier = [];
-        for (i = 0; i < saveProductLocalStorage.length; i++) {
+        //for (i = 0; i < saveProductLocalStorage.length; i++) {
+        for (produit of saveProductLocalStorage) {
             panier += `
                 <tr class="panier">
-                    <td class="panier_produit">${saveProductLocalStorage[i].name}</td>
-                    <td class="panier_image"><img src="${saveProductLocalStorage[i].imageUrl}" alt="${saveProductLocalStorage[i].name}"></td>
-                    <td class="panier_option">${saveProductLocalStorage[i].option}</td>
-                    <td class="panier_prix">${saveProductLocalStorage[i].prix} €</td>
+                    <td class="panier_produit">${produit.name}</td>
+                    <td class="panier_image"><img src="${produit.imageUrl}" alt="${produit.name}"></td>
+                    <td class="panier_option">${produit.option}</td>
+                    <td class="panier_prix">${produit.prix} €</td>
                     <td class="panier_supprimer"><input id="btn_supprArticle" type="button" value="X"></td>
                 <tr>
             `;
         }
-        if (i === saveProductLocalStorage.length) {
-            displayPanier.innerHTML = panier;
-        }
+        displayPanier.innerHTML = panier;
     }
 }
 showCommand();
 
 //Suppression d'un article
 function supprimerArticle(){
-    const suppArticle = getElementById("btn_supprArticle");
-    
+    let btn_supprimerArticle = document.querySelectorAll("#btn_supprArticle");
+
+    for (let l = 0; l < btn_supprimerArticle.length; l++){
+        btn_supprimerArticle[l].addEventListener("click", (event) =>{
+            event.preventDefault();
+
+            let boutonID = saveProductLocalStorage[l].id;
+            console.log(boutonID)
+            saveProductLocalStorage = saveProductLocalStorage.filter(element => element.id !== boutonID)
+
+            localStorage.setItem("produit", JSON.stringify(saveProductLocalStorage));
+            console.log(localStorage)
+            console.log(saveProductLocalStorage)
+
+            window.location.href = "panier.html";
+        })
+    }
 }
+supprimerArticle();
 
 //Suppression du PANIER
 function supprimerPanier() {
-    let supprPanier = `   
+    let supprPanier = "";
+
+    if (saveProductLocalStorage === null || saveProductLocalStorage == 0) {
+        
+        supprPanier = `
         <tr class="supprimer">
             <td>
-                <input id="btn_suppr" type="button" value="Supprimer le panier">
             </td>
-        </tr>
-    `;
-  
+        </tr>`
+    
+    } else {
+        supprPanier = `   
+            <tr class="supprimer">
+                <td>
+                    <input id="btn_suppr" type="button" value="Supprimer le panier">
+                </td>
+            </tr>
+        `;
+    }
     displayPanier.insertAdjacentHTML("beforeend", supprPanier);
-  
+
     let supprimer = document.getElementById("btn_suppr");
     if (supprimer) {
         supprimer.addEventListener("click", (e) => {
@@ -66,6 +92,7 @@ function supprimerPanier() {
             window.location.href = "index.html";
         });
     }
+
 }
 supprimerPanier();
 
@@ -86,15 +113,26 @@ function prixTotalCommande() {
     const prixTotalPanier = Number(prixPanier.reduce(summarize, 0));
 
     localStorage.setItem("prixTotalCommande", JSON.stringify(prixTotalPanier));
-    let showPrixPanier = `   
-        <tr class="prix_total">
-            <td>
-                <p>Le prix total de votre panier est de ${prixTotalPanier} €</p>
-            </td>
-        </tr>
-        `;
+    
+    let showPrixPanier = "";
+    if (saveProductLocalStorage === null || saveProductLocalStorage == 0){
 
-        displayPanier.insertAdjacentHTML("beforeend", showPrixPanier);
+        showPrixPanier = `
+            <tr class="prix_total">
+                <td>
+                </td>
+            </tr>`
+    } else {
+        showPrixPanier = `   
+            <tr class="prix_total">
+                <td>
+                    <p>Le prix total de votre panier est de ${prixTotalPanier} €</p>
+                </td>
+            </tr>
+            `;
+    }
+
+    displayPanier.insertAdjacentHTML("beforeend", showPrixPanier);
 }
 prixTotalCommande();
 

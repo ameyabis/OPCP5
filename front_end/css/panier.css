@@ -162,7 +162,10 @@ main .form #btn_valider {
 }
 
 footer {
-  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0 10px 0;
   background-color: #F3EAF1;
   text-align: center;
 }
